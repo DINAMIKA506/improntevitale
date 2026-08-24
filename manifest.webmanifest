@@ -1,0 +1,9 @@
+{
+  "name": "Impronte Vitale",
+  "short_name": "Impronte",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff9fb",
+  "theme_color": "#fff9fb",
+  "description": "Orientación y Psicopedagogía"
+}

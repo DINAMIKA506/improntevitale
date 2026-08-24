@@ -1,0 +1,29 @@
+MIGRACIÓN DE IMPRONTE VITALE A GITHUB Y VERCEL
+
+CONTENIDO INCLUIDO
+- Página de Inicio.
+- Página General con servicios, recursos, testimonios y enlaces.
+- Página Conversemos con formulario que abre WhatsApp.
+- Blog y tres artículos principales.
+- Fotografías y logotipo del sitio original.
+- Portada profesional para compartir en WhatsApp y redes.
+- Configuración SEO inicial, sitemap, robots.txt, página 404 y ajustes de seguridad.
+
+SUBIR A GITHUB
+1. Cree un repositorio nuevo llamado impronte-vitale.
+2. Abra Add file > Upload files.
+3. Suba TODO el contenido de esta carpeta a la raíz del repositorio.
+4. Confirme con Commit changes.
+
+CONECTAR CON VERCEL
+1. En Vercel seleccione Add New > Project.
+2. Importe el repositorio impronte-vitale.
+3. En Framework Preset seleccione Other.
+4. Deje Build Command y Output Directory vacíos.
+5. Pulse Deploy.
+
+IMPORTANTE DESPUÉS DE PUBLICAR
+- El proyecto está preparado para usar https://impronte-vitale.vercel.app como dirección inicial.
+- Si Vercel asigna otra dirección o conecta un dominio propio, reemplace esa dirección en los archivos HTML, robots.txt y sitemap.xml.
+- Cree una propiedad nueva de Google Analytics para este sitio. No reutilice la medición de Grúas Abangareñas.
+- El formulario no guarda información en una base de datos: abre WhatsApp al 8943-7609 con el mensaje preparado.
