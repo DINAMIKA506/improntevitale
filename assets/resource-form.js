@@ -12,7 +12,8 @@
     "estilos-aprendizaje": "/assets/recurso-estilos-aprendizaje.webp",
     "ruta-decision": "/assets/recurso-ruta-decision.webp",
     "proyecto-vida": "/assets/recurso-proyecto-vida.webp",
-    "ficha-tecnica": "/assets/recurso-ficha-tecnica.webp"
+    "ficha-tecnica": "/assets/recurso-ficha-tecnica.webp",
+    "creando-mi-ikigai": "/assets/recurso-creando-mi-ikigai.webp"
   };
   let currentStep = -1;
   let answers = {};
@@ -38,17 +39,16 @@
     "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
   })[character]);
 
-  const ikigaiCoverMarkup = () => '<div class="ikigai-card-cover ikigai-intro-cover" role="img" aria-label="Diagrama de Ikigai con cuatro círculos"><span class="ikigai-mini-circle ikigai-mini-love"></span><span class="ikigai-mini-circle ikigai-mini-good"></span><span class="ikigai-mini-circle ikigai-mini-world"></span><span class="ikigai-mini-circle ikigai-mini-paid"></span><strong>CREANDO<br>MI IKIGAI</strong></div>';
-
   function persist() {
     try { sessionStorage.setItem(storageKey, JSON.stringify(answers)); } catch (_) {}
   }
 
   function renderIntro() {
     const cover = resourceCovers[resourceId];
+    const coverSize = resourceId === "creando-mi-ikigai" ? [1350, 700] : [1000, 519];
     const coverMarkup = cover
-      ? `<img class="resource-intro-cover" src="${cover}" alt="Portada de ${escapeHtml(resource.title)}" width="1000" height="519">`
-      : resourceId === "creando-mi-ikigai" ? ikigaiCoverMarkup() : "";
+      ? `<img class="resource-intro-cover" src="${cover}" alt="Portada de ${escapeHtml(resource.title)}" width="${coverSize[0]}" height="${coverSize[1]}">`
+      : "";
     frame.innerHTML = `
       <div class="resource-intro">
         ${coverMarkup}
@@ -169,20 +169,18 @@
 
   function renderIkigaiDiagram() {
     const value = (key) => escapeHtml(answers[key] || "Por descubrir");
-    return `<div class="ikigai-result-scroll"><div class="ikigai-diagram" data-ikigai-diagram>
-      <span class="ikigai-shape ikigai-shape-love" aria-hidden="true"></span>
-      <span class="ikigai-shape ikigai-shape-good" aria-hidden="true"></span>
-      <span class="ikigai-shape ikigai-shape-world" aria-hidden="true"></span>
-      <span class="ikigai-shape ikigai-shape-paid" aria-hidden="true"></span>
-      <div class="ikigai-answer ikigai-answer-love"><strong>Amo</strong><span>${value("ik_love")}</span></div>
-      <div class="ikigai-answer ikigai-answer-good"><strong>Soy buena/o en</strong><span>${value("ik_good")}</span></div>
-      <div class="ikigai-answer ikigai-answer-world"><strong>El mundo necesita</strong><span>${value("ik_world")}</span></div>
-      <div class="ikigai-answer ikigai-answer-paid"><strong>Me pueden pagar por</strong><span>${value("ik_paid")}</span></div>
-      <strong class="ikigai-intersection ikigai-passion">PASIÓN</strong>
-      <strong class="ikigai-intersection ikigai-mission">MISIÓN</strong>
-      <strong class="ikigai-intersection ikigai-profession">PROFESIÓN</strong>
-      <strong class="ikigai-intersection ikigai-vocation">VOCACIÓN</strong>
-      <div class="ikigai-core"><strong>MI IKIGAI</strong><span>${value("ik_core")}</span></div>
+    return `<div class="ikigai-result-scroll"><div class="ikigai-board" data-ikigai-diagram>
+      <img class="ikigai-board-image" src="/assets/ikigai-resultado.webp" alt="Diagrama de Ikigai con las áreas pasión, misión, profesión y vocación" width="1120" height="896">
+      <article class="ikigai-postit ikigai-postit-love"><strong>Lo que amás</strong><span>${value("ik_love")}</span></article>
+      <article class="ikigai-postit ikigai-postit-good"><strong>Lo que sabés hacer bien</strong><span>${value("ik_good")}</span></article>
+      <article class="ikigai-postit ikigai-postit-world"><strong>Lo que el mundo necesita</strong><span>${value("ik_world")}</span></article>
+      <article class="ikigai-postit ikigai-postit-paid"><strong>Lo que te genera recursos</strong><span>${value("ik_paid")}</span></article>
+      <article class="ikigai-postit ikigai-postit-core"><strong>Mi punto de encuentro</strong><span>${value("ik_core")}</span></article>
+      <span class="ikigai-arrow ikigai-arrow-love" aria-hidden="true">↘</span>
+      <span class="ikigai-arrow ikigai-arrow-good" aria-hidden="true">↗</span>
+      <span class="ikigai-arrow ikigai-arrow-world" aria-hidden="true">↙</span>
+      <span class="ikigai-arrow ikigai-arrow-paid" aria-hidden="true">↖</span>
+      <span class="ikigai-arrow ikigai-arrow-core" aria-hidden="true">↑</span>
     </div></div>`;
   }
 
@@ -206,25 +204,66 @@
     return lines;
   }
 
-  function drawCanvasBlock(context, title, body, x, y, maxWidth, options = {}) {
+  function loadCanvasImage(source) {
+    return new Promise((resolve, reject) => {
+      const image = new Image();
+      image.onload = () => resolve(image);
+      image.onerror = () => reject(new Error("No se pudo cargar el diagrama."));
+      image.src = source;
+    });
+  }
+
+  function drawCanvasPostIt(context, title, body, x, y, width, height, rotation = 0) {
     context.save();
+    context.translate(x + (width / 2), y + (height / 2));
+    context.rotate((rotation * Math.PI) / 180);
+    context.shadowColor = "rgba(22, 47, 86, .16)";
+    context.shadowBlur = 22;
+    context.shadowOffsetY = 12;
+    context.fillStyle = "#fff0df";
+    context.fillRect(-(width / 2), -(height / 2), width, height);
+    context.shadowColor = "transparent";
+    context.fillStyle = "rgba(239, 143, 170, .58)";
+    context.fillRect(-70, -(height / 2) - 7, 140, 34);
     context.textAlign = "center";
     context.textBaseline = "top";
-    context.fillStyle = options.titleColor || "#162f56";
-    context.font = `800 ${options.titleSize || 38}px "Open Sans", Arial, sans-serif`;
-    context.fillText(title, x, y);
-    context.fillStyle = options.bodyColor || "#394b63";
-    context.font = `600 ${options.bodySize || 25}px "Open Sans", Arial, sans-serif`;
-    const lines = canvasLines(context, body, maxWidth, options.maxLines || 5);
-    const lineHeight = options.lineHeight || 33;
-    lines.forEach((line, index) => context.fillText(line, x, y + (options.titleSize || 38) + 18 + (index * lineHeight)));
+    context.fillStyle = "#162f56";
+    context.font = '800 29px "Open Sans", Arial, sans-serif';
+    const titleLines = canvasLines(context, title.toUpperCase(), width - 52, 2);
+    titleLines.forEach((line, index) => context.fillText(line, 0, -(height / 2) + 40 + (index * 34)));
+    const titleHeight = titleLines.length * 34;
+    context.fillStyle = "#394b63";
+    context.font = '600 23px "Open Sans", Arial, sans-serif';
+    const lines = canvasLines(context, body, width - 58, 7);
+    lines.forEach((line, index) => context.fillText(line, 0, -(height / 2) + 54 + titleHeight + (index * 30)));
+    context.restore();
+  }
+
+  function drawCanvasArrow(context, startX, startY, controlX, controlY, endX, endY) {
+    context.save();
+    context.strokeStyle = "#e97899";
+    context.fillStyle = "#e97899";
+    context.lineWidth = 5;
+    context.lineCap = "round";
+    context.beginPath();
+    context.moveTo(startX, startY);
+    context.quadraticCurveTo(controlX, controlY, endX, endY);
+    context.stroke();
+    const angle = Math.atan2(endY - controlY, endX - controlX);
+    context.beginPath();
+    context.moveTo(endX, endY);
+    context.lineTo(endX - (18 * Math.cos(angle - .5)), endY - (18 * Math.sin(angle - .5)));
+    context.lineTo(endX - (18 * Math.cos(angle + .5)), endY - (18 * Math.sin(angle + .5)));
+    context.closePath();
+    context.fill();
     context.restore();
   }
 
   async function downloadIkigai() {
     if (document.fonts?.ready) await document.fonts.ready;
+    const diagram = await loadCanvasImage("/assets/ikigai-resultado.webp");
     const canvas = document.createElement("canvas");
-    canvas.width = 1400;
+    canvas.width = 1800;
     canvas.height = 1400;
     const context = canvas.getContext("2d");
     context.fillStyle = "#fffafc";
@@ -233,39 +272,26 @@
     context.textAlign = "center";
     context.fillStyle = "#162f56";
     context.font = '800 54px "Open Sans", Arial, sans-serif';
-    context.fillText("CREANDO MI IKIGAI", 700, 70);
+    context.fillText("CREANDO MI IKIGAI", 900, 70);
     const participant = answers.participant_name || answers.nombre || "";
     if (participant) {
       context.fillStyle = "#5f6f85";
       context.font = '600 25px "Open Sans", Arial, sans-serif';
-      context.fillText(participant, 700, 112);
+      context.fillText(participant, 900, 112);
     }
 
-    const circles = [
-      [700, 410, "rgba(238,143,141,.68)"],
-      [430, 680, "rgba(222,213,140,.58)"],
-      [970, 680, "rgba(175,190,215,.58)"],
-      [700, 950, "rgba(247,181,165,.62)"]
-    ];
-    circles.forEach(([x, y, color]) => {
-      context.beginPath();
-      context.arc(x, y, 350, 0, Math.PI * 2);
-      context.fillStyle = color;
-      context.fill();
-    });
+    context.drawImage(diagram, 500, 240, 800, 640);
+    drawCanvasArrow(context, 455, 350, 505, 285, 555, 310);
+    drawCanvasArrow(context, 1345, 350, 1295, 285, 1245, 310);
+    drawCanvasArrow(context, 465, 895, 520, 835, 565, 790);
+    drawCanvasArrow(context, 1335, 895, 1280, 835, 1235, 790);
+    drawCanvasArrow(context, 900, 1090, 900, 1025, 900, 925);
 
-    drawCanvasBlock(context, "AMO", answers.ik_love, 700, 175, 430, { titleColor: "#ffffff", bodyColor: "#26374d", maxLines: 5 });
-    drawCanvasBlock(context, "SOY BUENA/O EN", answers.ik_good, 260, 620, 290, { titleSize: 31, bodySize: 23, lineHeight: 30, maxLines: 6 });
-    drawCanvasBlock(context, "EL MUNDO NECESITA", answers.ik_world, 1140, 620, 300, { titleSize: 31, bodySize: 23, lineHeight: 30, maxLines: 6 });
-    drawCanvasBlock(context, "ME PUEDEN PAGAR POR", answers.ik_paid, 700, 1085, 440, { titleSize: 31, bodySize: 23, lineHeight: 30, maxLines: 5 });
-
-    context.font = '800 28px "Open Sans", Arial, sans-serif';
-    context.fillStyle = "#c96f79";
-    context.fillText("PASIÓN", 470, 470);
-    context.fillText("MISIÓN", 930, 470);
-    context.fillText("PROFESIÓN", 470, 905);
-    context.fillText("VOCACIÓN", 930, 905);
-    drawCanvasBlock(context, "MI IKIGAI", answers.ik_core, 700, 625, 310, { titleColor: "#ffffff", bodyColor: "#162f56", titleSize: 38, bodySize: 22, lineHeight: 29, maxLines: 5 });
+    drawCanvasPostIt(context, "Lo que amás", answers.ik_love, 60, 190, 380, 300, -5);
+    drawCanvasPostIt(context, "Lo que el mundo necesita", answers.ik_world, 1360, 190, 380, 300, 5);
+    drawCanvasPostIt(context, "Lo que sabés hacer bien", answers.ik_good, 70, 820, 390, 300, 4);
+    drawCanvasPostIt(context, "Lo que te genera recursos", answers.ik_paid, 1340, 820, 390, 300, -4);
+    drawCanvasPostIt(context, "Mi punto de encuentro", answers.ik_core, 610, 1110, 580, 230, 0);
 
     await new Promise((resolve, reject) => {
       canvas.toBlob((blob) => {
