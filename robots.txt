@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /recursos/ficha-tecnica/
+Disallow: /recursos/recurso/
 
 Sitemap: https://impronte-vitale.vercel.app/sitemap.xml

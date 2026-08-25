@@ -1,0 +1,116 @@
+ACTIVAR EL CRM PRIVADO DE IMPRONTE VITALE
+
+Dirección del panel después de publicar:
+https://improntevitale.vercel.app/admin/
+
+Cuenta autorizada:
+improntevitale.orx@gmail.com
+
+IMPORTANTE
+La contraseña no viene escrita en este paquete. Se crea directamente en
+Supabase para que nunca aparezca en GitHub ni dentro de la página.
+
+PARTE 1 — PREPARAR SUPABASE
+
+1. Entrá al proyecto de Supabase que utiliza Impronte Vitale.
+2. En el menú izquierdo abrí SQL Editor.
+3. Elegí New query.
+4. Abrí el archivo crm/supabase.sql de este paquete.
+5. Copiá todo su contenido, pegalo en Supabase y presioná Run.
+6. Debe aparecer el mensaje Success.
+
+El SQL crea o actualiza:
+- consultas de contacto;
+- formularios y fichas;
+- comentarios;
+- artículos del blog;
+- recursos interactivos;
+- textos editables de la página;
+- carpeta pública para imágenes de artículos.
+
+PARTE 2 — CREAR LA USUARIA ADMINISTRADORA
+
+1. En Supabase abrí Authentication → URL Configuration y escribí como Site URL:
+   https://improntevitale.vercel.app
+   Agregá también https://improntevitale.vercel.app/admin/ en Redirect URLs.
+2. Abrí Authentication → Users y presioná Add user.
+3. Si aparece Create new user, elegí esa opción, escribí el correo
+   improntevitale.orx@gmail.com y una contraseña privada de al menos 12 caracteres.
+4. Activá Auto Confirm User y guardá.
+5. Si solo aparece Send invitation, enviá la invitación a ese mismo correo,
+   abrí el mensaje recibido y terminá de definir la contraseña desde el enlace.
+6. Guardá la contraseña en un gestor de contraseñas; no la subás a GitHub.
+
+No habilités el registro público. El CRM solo permite entrar a ese correo.
+
+PARTE 3 — COPIAR LAS TRES LLAVES DE SUPABASE
+
+En Supabase abrí Project Settings → API y copiá:
+
+1. Project URL.
+2. La llave Secret o service_role.
+3. La llave Publishable o anon.
+
+La llave Secret nunca debe aparecer en GitHub, WhatsApp ni capturas públicas.
+
+PARTE 4 — CONFIGURAR VERCEL
+
+1. Abrí el proyecto improntevitale en Vercel.
+2. Entrá a Settings → Environment Variables.
+3. Agregá estas cuatro variables para Production. Usá Preview o Development
+   únicamente cuando necesités probar el CRM fuera del sitio principal:
+
+   SUPABASE_URL
+   Valor: Project URL de Supabase.
+
+   SUPABASE_SECRET_KEY
+   Valor: llave Secret o service_role.
+
+   SUPABASE_PUBLISHABLE_KEY
+   Valor: llave Publishable. Si tu proyecto solo muestra la llave antigua anon,
+   también podés usarla aquí.
+
+   ADMIN_EMAIL
+   Valor: improntevitale.orx@gmail.com
+
+4. No agregués la contraseña como variable de Vercel.
+
+PARTE 5 — PUBLICAR
+
+1. Subí a GitHub TODO el contenido descomprimido de este paquete.
+2. Confirmá con Commit changes.
+3. Esperá que Vercel muestre el deployment como Ready.
+4. Si configuraste las variables después del deployment, entrá a Deployments,
+   abrí el menú del último deployment y elegí Redeploy.
+
+PARTE 6 — PRIMERA PRUEBA
+
+1. Abrí https://improntevitale.vercel.app/admin/
+2. El correo aparecerá escrito automáticamente.
+3. Ingresá la contraseña creada en Supabase.
+4. Probá crear un artículo como Borrador.
+5. Probá cambiar una frase de Página web y revisá el Inicio.
+6. Enviá una consulta de prueba desde Conversemos.
+7. Completá un recurso de prueba y verificá que aparezca en Formularios.
+8. Eliminá los datos de prueba desde el panel.
+
+QUÉ PODÉS HACER DESDE EL CRM
+
+- Revisar contactos y registrar seguimiento.
+- Abrir respuestas completas de tests y fichas.
+- Aprobar o rechazar comentarios.
+- Crear, editar, publicar y archivar artículos.
+- Subir imágenes para artículos.
+- Editar etapas y preguntas de los recursos existentes.
+- Crear recursos nuevos y ocultarlos o publicarlos.
+- Cambiar el mensaje principal y el enlace de agenda de la página.
+
+SEGURIDAD Y PRIVACIDAD
+
+- Activá la verificación en dos pasos de tu cuenta de Supabase.
+- No compartás la contraseña del CRM.
+- Eliminá datos que ya no sean necesarios.
+- Antes de usar fichas como expediente profesional definitivo, definí respaldo,
+  plazo de conservación y requisitos legales aplicables en Costa Rica.
+- El plan gratuito de Supabase puede pausar proyectos inactivos y no sustituye
+  una política profesional de copias de seguridad.

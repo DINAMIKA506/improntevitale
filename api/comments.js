@@ -1,4 +1,4 @@
-const { supabaseRequest, json, clientIp } = require("./_supabase");
+const { supabaseRequest, json, clientIp, bodyObject } = require("./_supabase");
 
 const attempts = globalThis.__impronteCommentAttempts || new Map();
 globalThis.__impronteCommentAttempts = attempts;
@@ -31,7 +31,7 @@ module.exports = async function handler(req, res) {
 
   if (req.method === "POST") {
     if (limited(clientIp(req))) return json(res, 429, { message: "Demasiados comentarios seguidos. Esperá unos minutos." });
-    const body = req.body && typeof req.body === "object" ? req.body : {};
+    const body = bodyObject(req);
     if (body.website) return json(res, 202, { ok: true });
     const slug = String(body.slug || "");
     const name = String(body.name || "").trim().slice(0, 80);

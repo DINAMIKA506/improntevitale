@@ -16,7 +16,7 @@
   <meta property="og:image" content="https://impronte-vitale.vercel.app/assets/og-impronte.jpg">
   <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/site-v3.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Impronte Vitale","description":"Servicios de orientación y psicopedagogía","telephone":"+50689437609","areaServed":{"@type":"Country","name":"Costa Rica"},"sameAs":["https://instagram.com/improntevitale_orx","https://www.facebook.com/profile.php?id=100029060751600"]}</script>
 </head>
 <body>
@@ -25,19 +25,19 @@
     <a class="brand" href="/"><img src="/assets/logo-impronte.avif" alt="" width="50" height="50"><span>Impronte Vitale</span></a>
     <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="site-nav" aria-label="Sitio"><ul>
-      <li><a href="/" aria-current="page">INICIO</a></li><li><a href="/general/">SERVICIOS</a></li><li><a href="/recursos/">RECURSOS</a></li><li><a href="/blog/">BLOG</a></li><li><a href="/conversemos/">CONTACTO</a></li><li><a class="nav-cta" href="https://wa.me/50689437609" target="_blank" rel="noopener">AGENDAR 1:1</a></li>
+      <li><a href="/" aria-current="page">INICIO</a></li><li><a href="/general/">SERVICIOS</a></li><li><a href="/recursos/">RECURSOS</a></li><li><a href="/blog/">BLOG</a></li><li><a href="/conversemos/">CONTACTO</a></li><li><a class="nav-cta" href="https://wa.me/50689437609" target="_blank" rel="noopener" data-booking-link data-booking-label>AGENDAR 1:1</a></li>
     </ul></nav>
   </header>
 
   <main id="contenido">
     <section class="hero-shell">
       <div class="hero-copy">
-        <p class="eyebrow">Orientación + Psicopedagogía</p>
-        <h1>Tu proyecto de vida merece una ruta que se sienta <span class="accent">tuya.</span></h1>
-        <p class="lead">Un espacio profesional, cercano y humano para conocerte mejor, tomar decisiones con claridad y construir herramientas que te acompañen en cada etapa.</p>
+        <p class="eyebrow" data-cms-text="hero_kicker">Orientación + Psicopedagogía</p>
+        <h1><span data-cms-text="hero_title">Tu proyecto de vida merece una ruta que se sienta</span> <span class="accent" data-cms-text="hero_accent">tuya.</span></h1>
+        <p class="lead" data-cms-text="hero_description">Un espacio profesional, cercano y humano para conocerte mejor, tomar decisiones con claridad y construir herramientas que te acompañen en cada etapa.</p>
         <div class="button-row">
-          <a class="primary-button" href="https://wa.me/50689437609" target="_blank" rel="noopener">Agendar sesión 1:1</a>
-          <a class="secondary-button" href="/recursos/">Explorar recursos</a>
+          <a class="primary-button" href="https://wa.me/50689437609" target="_blank" rel="noopener" data-booking-link data-cms-text="primary_label">Agendar sesión 1:1</a>
+          <a class="secondary-button" href="/recursos/" data-cms-href="secondary_url" data-cms-text="secondary_label">Explorar recursos</a>
         </div>
         <p class="hero-note"><span>✓</span> Atención personalizada · Costa Rica</p>
       </div>
@@ -95,6 +95,7 @@
   </main>
 
   <footer class="site-footer"><div class="footer-links"><a href="/general/">Servicios</a><a href="/recursos/">Recursos</a><a href="/blog/">Blog</a><a href="/conversemos/">Contacto</a><a href="/privacidad/">Privacidad</a></div>© <span data-year></span> Impronte Vitale</footer>
-  <script src="/assets/main.js" defer></script>
+  <script src="/assets/site-v4.js" defer></script>
+  <script src="/assets/site-content.js" defer></script>
 </body>
 </html>

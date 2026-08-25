@@ -2,8 +2,9 @@
   const root = document.querySelector("[data-resource-app]");
   if (!root || !window.IMPRONTE_RESOURCES) return;
 
-  const resourceId = root.dataset.resourceApp;
-  const resource = window.IMPRONTE_RESOURCES[resourceId];
+  const requestedId = root.dataset.resourceApp === "dynamic" ? new URLSearchParams(location.search).get("id") : root.dataset.resourceApp;
+  const resourceId = String(requestedId || "");
+  let resource = window.IMPRONTE_RESOURCES[resourceId] || null;
   const frame = root.querySelector(".resource-frame");
   const storageKey = `impronte-resource-${resourceId}`;
   let currentStep = -1;
@@ -24,7 +25,7 @@
       { id: "participant_email", label: "Correo electrónico", type: "email", required: false }
     ]
   };
-  const steps = resource.collectIdentity ? [identityStep, ...resource.steps] : resource.steps;
+  let steps = [];
 
   const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, (character) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
@@ -174,9 +175,29 @@
     frame.querySelector("[data-print]").addEventListener("click", () => window.print());
   }
 
-  if (!resource) {
-    frame.innerHTML = "<h1>Recurso no disponible</h1><a href='/recursos/'>Volver a recursos</a>";
-  } else {
+  async function initialize() {
+    if (/^[a-z0-9][a-z0-9-]{1,78}[a-z0-9]$/.test(resourceId)) {
+      try {
+        const response = await fetch(`/api/resources?id=${encodeURIComponent(resourceId)}`);
+        if (response.status === 410) {
+          resource = null;
+        } else if (response.ok) {
+          const payload = await response.json();
+          if (payload.result) resource = payload.result;
+        }
+      } catch (_) {}
+    }
+    if (!resource) {
+      frame.innerHTML = "<h1>Recurso no disponible</h1><p>Este recurso no existe o todavía no está publicado.</p><a class='secondary-button' href='/recursos/'>Volver a recursos</a>";
+      return;
+    }
+    steps = resource.collectIdentity ? [identityStep, ...(resource.steps || [])] : (resource.steps || []);
+    if (!steps.length) {
+      frame.innerHTML = "<h1>Recurso en preparación</h1><p>Estamos terminando de configurar esta experiencia.</p><a class='secondary-button' href='/recursos/'>Volver a recursos</a>";
+      return;
+    }
     renderIntro();
   }
+
+  initialize();
 })();

@@ -1,0 +1,2670 @@
+{
+  "madurez-vocacional": {
+    "kicker": "Test orientativo",
+    "title": "Madurez vocacional",
+    "description": "Explorá el estado de preparación en el que te encontrás para efectuar una elección vocacional.",
+    "duration": "10–12 minutos",
+    "collectIdentity": true,
+    "resultType": "maturity",
+    "steps": [
+      {
+        "title": "Autoconocimiento",
+        "description": "Reconocé cómo te valorás y cómo te posicionás ante nuevas experiencias.",
+        "questions": [
+          {
+            "id": "m1",
+            "label": "Tengo conciencia de lo que valgo y logro hacerme respetar por ello.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 0
+          },
+          {
+            "id": "m2",
+            "label": "Acepto con agrado lo esencial de mi forma de ser.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 0
+          },
+          {
+            "id": "m3",
+            "label": "Defiendo con empeño mis ideas y obras.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 0
+          },
+          {
+            "id": "m4",
+            "label": "Cuando debo valorarme respecto a otras personas, me doy mi lugar.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 0
+          },
+          {
+            "id": "m5",
+            "label": "Actúo con independencia para tomar decisiones importantes.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 0
+          },
+          {
+            "id": "m6",
+            "label": "Resuelvo mis propios problemas.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 0
+          },
+          {
+            "id": "m7",
+            "label": "No me preocupa demasiado lo que piensan otras personas al emprender una actividad nueva.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 0
+          }
+        ]
+      },
+      {
+        "title": "Compromiso personal",
+        "description": "Pensá en la forma en que asumís y sostenés tus responsabilidades.",
+        "questions": [
+          {
+            "id": "m8",
+            "label": "Hago frente a mis compromisos.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 1
+          },
+          {
+            "id": "m9",
+            "label": "Llevo mis actividades hasta el final.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 1
+          },
+          {
+            "id": "m10",
+            "label": "Doy seguimiento al trabajo que comienzo.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 1
+          },
+          {
+            "id": "m11",
+            "label": "Confío en mi capacidad.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 1
+          },
+          {
+            "id": "m12",
+            "label": "Me siento seguro o segura de mis capacidades al asumir compromisos.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 1
+          },
+          {
+            "id": "m13",
+            "label": "Persisto ante las dificultades.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 1
+          },
+          {
+            "id": "m14",
+            "label": "Estoy dispuesto o dispuesta a trabajar las horas necesarias para alcanzar un objetivo.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 1
+          }
+        ]
+      },
+      {
+        "title": "Iniciativa y metas",
+        "description": "Explorá cómo convertís tus ideas en acciones.",
+        "questions": [
+          {
+            "id": "m15",
+            "label": "Busco otra forma de actuar cuando el primer intento no funciona.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 2
+          },
+          {
+            "id": "m16",
+            "label": "Concreto las metas que me propongo.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 2
+          },
+          {
+            "id": "m17",
+            "label": "Visualizo rutas para alcanzar mis metas y me organizo.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 2
+          },
+          {
+            "id": "m18",
+            "label": "Tomo la iniciativa cuando trabajo en grupo.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 2
+          },
+          {
+            "id": "m19",
+            "label": "Encuentro formas de hacer realidad mis planes.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 2
+          },
+          {
+            "id": "m20",
+            "label": "Me organizo para cumplir mis compromisos.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 2
+          },
+          {
+            "id": "m21",
+            "label": "Encuentro con facilidad formas de realizar mis deseos y metas.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 2
+          },
+          {
+            "id": "m22",
+            "label": "Aprovecho mis fortalezas y busco equilibrar mis debilidades.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 2
+          }
+        ]
+      },
+      {
+        "title": "Decisión y comunicación",
+        "description": "Observá tus recursos para expresarte y elegir.",
+        "questions": [
+          {
+            "id": "m23",
+            "label": "Me comunico con facilidad.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 3
+          },
+          {
+            "id": "m24",
+            "label": "Puedo tomar una decisión con rapidez cuando la situación lo requiere.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 3
+          },
+          {
+            "id": "m25",
+            "label": "Una vez que he tomado una decisión importante, mantengo mi criterio.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 3
+          },
+          {
+            "id": "m26",
+            "label": "Si una decisión lo amerita, la pospongo hasta analizar sus distintos aspectos.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 3
+          },
+          {
+            "id": "m27",
+            "label": "Busco la opinión de alguien cercano para decisiones que no son trascendentes.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 3
+          },
+          {
+            "id": "m28",
+            "label": "Distingo con claridad las posibilidades disponibles antes de decidir.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 3
+          },
+          {
+            "id": "m29",
+            "label": "Escucho lo que otras personas opinan sobre mí aunque no coincida con ello.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 3
+          }
+        ]
+      },
+      {
+        "title": "Flexibilidad y motivación",
+        "description": "Revisá cómo recibís otras perspectivas y sostenés el entusiasmo.",
+        "questions": [
+          {
+            "id": "m30",
+            "label": "Escucho sin impacientarme.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 4
+          },
+          {
+            "id": "m31",
+            "label": "Tolero posiciones contrarias a la mía.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 4
+          },
+          {
+            "id": "m32",
+            "label": "Acepto que un problema puede tener varias soluciones.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 4
+          },
+          {
+            "id": "m33",
+            "label": "Me adapto a los cambios.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 4
+          },
+          {
+            "id": "m34",
+            "label": "Me apasiono con una idea o causa que considero valiosa.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 4
+          },
+          {
+            "id": "m35",
+            "label": "Me entusiasmo con proyectos nuevos.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 4
+          },
+          {
+            "id": "m36",
+            "label": "Puedo continuar aunque el reconocimiento no sea inmediato.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 4
+          },
+          {
+            "id": "m37",
+            "label": "Puedo esperar cuando la recompensa de mi esfuerzo tarda.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 4
+          }
+        ]
+      },
+      {
+        "title": "Serenidad y optimismo",
+        "description": "Reconocé cómo transitás la espera, la presión y las dificultades.",
+        "questions": [
+          {
+            "id": "m38",
+            "label": "Espero los resultados con serenidad.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 5
+          },
+          {
+            "id": "m39",
+            "label": "Mantengo mi fortaleza cuando encuentro una dificultad.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 5
+          },
+          {
+            "id": "m40",
+            "label": "Conservo la serenidad ante una situación difícil.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 5
+          },
+          {
+            "id": "m41",
+            "label": "Puedo actuar sin sentir presión excesiva.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 5
+          },
+          {
+            "id": "m42",
+            "label": "Controlo mis reacciones cotidianas sin acumular gran tensión.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 5
+          },
+          {
+            "id": "m43",
+            "label": "Actúo con optimismo ante una actividad o un cambio.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 5
+          },
+          {
+            "id": "m44",
+            "label": "Mantengo una mirada optimista hacia mi futuro.",
+            "type": "radio",
+            "options": [
+              {
+                "label": "0 · No logro definirlo",
+                "value": "0"
+              },
+              {
+                "label": "1 · Nunca",
+                "value": "1"
+              },
+              {
+                "label": "2 · Pocas veces",
+                "value": "2"
+              },
+              {
+                "label": "3 · Bastantes veces",
+                "value": "3"
+              },
+              {
+                "label": "4 · Con mucha frecuencia",
+                "value": "4"
+              }
+            ],
+            "required": true,
+            "group": 5
+          }
+        ]
+      }
+    ],
+    "note": "No hay respuestas buenas o malas. Elegí la frecuencia que mejor representa tu experiencia actual. El resultado es orientativo y debe revisarse en contexto con una persona profesional."
+  },
+  "estilos-aprendizaje": {
+    "kicker": "Test orientativo",
+    "title": "Estilos de aprendizaje",
+    "description": "Observá qué canales tendés a utilizar con mayor frecuencia al aprender y relacionarte con la información.",
+    "duration": "8–10 minutos",
+    "collectIdentity": true,
+    "resultType": "learning",
+    "steps": [
+      {
+        "title": "Tus preferencias",
+        "description": "Elegí una sola opción, la que más se parezca a vos.",
+        "questions": [
+          {
+            "id": "e1",
+            "label": "¿Cuál de las siguientes actividades disfrutás más?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Escuchar música",
+                "value": "A"
+              },
+              {
+                "label": "Ver películas",
+                "value": "V"
+              },
+              {
+                "label": "Bailar con buena música",
+                "value": "K"
+              }
+            ]
+          },
+          {
+            "id": "e2",
+            "label": "¿Qué programa de televisión preferís?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Reportajes de descubrimientos y lugares",
+                "value": "V"
+              },
+              {
+                "label": "Cómico y de entretenimiento",
+                "value": "K"
+              },
+              {
+                "label": "Noticias del mundo",
+                "value": "A"
+              }
+            ]
+          },
+          {
+            "id": "e3",
+            "label": "Cuando conversás con otra persona, vos...",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "La escuchás atentamente",
+                "value": "A"
+              },
+              {
+                "label": "La observás",
+                "value": "V"
+              },
+              {
+                "label": "Tendés a tocarla",
+                "value": "K"
+              }
+            ]
+          },
+          {
+            "id": "e4",
+            "label": "Si pudieras adquirir uno de estos artículos, ¿cuál elegirías?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Un jacuzzi",
+                "value": "K"
+              },
+              {
+                "label": "Un estéreo",
+                "value": "A"
+              },
+              {
+                "label": "Un televisor",
+                "value": "V"
+              }
+            ]
+          },
+          {
+            "id": "e5",
+            "label": "¿Qué preferís hacer un sábado por la tarde?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Quedarte en casa",
+                "value": "K"
+              },
+              {
+                "label": "Ir a un concierto",
+                "value": "A"
+              },
+              {
+                "label": "Ir al cine",
+                "value": "V"
+              }
+            ]
+          },
+          {
+            "id": "e6",
+            "label": "¿Qué tipo de exámenes se te facilitan más?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Examen oral",
+                "value": "A"
+              },
+              {
+                "label": "Examen escrito",
+                "value": "K"
+              },
+              {
+                "label": "Examen de opción múltiple",
+                "value": "V"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Cómo percibís",
+        "description": "Elegí una sola opción, la que más se parezca a vos.",
+        "questions": [
+          {
+            "id": "e7",
+            "label": "¿Cómo te orientás más fácilmente?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Mediante el uso de un mapa",
+                "value": "V"
+              },
+              {
+                "label": "Pidiendo indicaciones",
+                "value": "A"
+              },
+              {
+                "label": "A través de la intuición",
+                "value": "K"
+              }
+            ]
+          },
+          {
+            "id": "e8",
+            "label": "¿En qué preferís ocupar tu tiempo en un lugar de descanso?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Pensar",
+                "value": "A"
+              },
+              {
+                "label": "Caminar por los alrededores",
+                "value": "V"
+              },
+              {
+                "label": "Descansar",
+                "value": "K"
+              }
+            ]
+          },
+          {
+            "id": "e9",
+            "label": "¿Qué te halaga más?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Que te digan que tenés buen aspecto",
+                "value": "V"
+              },
+              {
+                "label": "Que te digan que tenés un trato muy agradable",
+                "value": "K"
+              },
+              {
+                "label": "Que te digan que tenés una conversación interesante",
+                "value": "A"
+              }
+            ]
+          },
+          {
+            "id": "e10",
+            "label": "¿Cuál de estos ambientes te atrae más?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Uno en el que se siente un clima agradable",
+                "value": "K"
+              },
+              {
+                "label": "Uno en el que se escuchen las olas del mar",
+                "value": "A"
+              },
+              {
+                "label": "Uno con una hermosa vista al océano",
+                "value": "V"
+              }
+            ]
+          },
+          {
+            "id": "e11",
+            "label": "¿De qué manera se te facilita aprender algo?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Repitiendo en voz alta",
+                "value": "A"
+              },
+              {
+                "label": "Escribiéndolo varias veces",
+                "value": "V"
+              },
+              {
+                "label": "Relacionándolo con algo divertido",
+                "value": "K"
+              }
+            ]
+          },
+          {
+            "id": "e12",
+            "label": "¿A qué evento preferirías asistir?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "A una reunión social",
+                "value": "K"
+              },
+              {
+                "label": "A una exposición de arte",
+                "value": "V"
+              },
+              {
+                "label": "A una conferencia",
+                "value": "A"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Cómo recordás",
+        "description": "Elegí una sola opción, la que más se parezca a vos.",
+        "questions": [
+          {
+            "id": "e13",
+            "label": "¿De qué manera te formás una opinión de otras personas?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Por la sinceridad en su voz",
+                "value": "A"
+              },
+              {
+                "label": "Por la forma de estrecharte la mano",
+                "value": "K"
+              },
+              {
+                "label": "Por su aspecto",
+                "value": "V"
+              }
+            ]
+          },
+          {
+            "id": "e14",
+            "label": "¿Cómo te considerás?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Atlético o atlética",
+                "value": "K"
+              },
+              {
+                "label": "Intelectual",
+                "value": "V"
+              },
+              {
+                "label": "Sociable",
+                "value": "A"
+              }
+            ]
+          },
+          {
+            "id": "e15",
+            "label": "¿Qué tipo de películas te gustan más?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Clásicas",
+                "value": "A"
+              },
+              {
+                "label": "De acción",
+                "value": "K"
+              },
+              {
+                "label": "De amor",
+                "value": "V"
+              }
+            ]
+          },
+          {
+            "id": "e16",
+            "label": "¿Cómo preferís mantenerte en contacto con otra persona?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Por correo electrónico",
+                "value": "V"
+              },
+              {
+                "label": "Tomando un café juntos",
+                "value": "K"
+              },
+              {
+                "label": "Por teléfono",
+                "value": "A"
+              }
+            ]
+          },
+          {
+            "id": "e17",
+            "label": "¿Cuál frase se identifica más con vos?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Me gusta que mi coche se sienta bien al conducirlo",
+                "value": "K"
+              },
+              {
+                "label": "Percibo hasta el más ligero ruido que hace mi coche",
+                "value": "A"
+              },
+              {
+                "label": "Es importante que mi coche esté limpio por fuera y por dentro",
+                "value": "V"
+              }
+            ]
+          },
+          {
+            "id": "e18",
+            "label": "¿Cómo preferís pasar el tiempo con tu pareja?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Conversando",
+                "value": "A"
+              },
+              {
+                "label": "Acariciándose",
+                "value": "K"
+              },
+              {
+                "label": "Mirando algo juntos",
+                "value": "V"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Cómo elegís",
+        "description": "Elegí una sola opción, la que más se parezca a vos.",
+        "questions": [
+          {
+            "id": "e19",
+            "label": "Si no encontrás las llaves en una bolsa...",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Las buscás mirando",
+                "value": "V"
+              },
+              {
+                "label": "Sacudís la bolsa para oír el ruido",
+                "value": "A"
+              },
+              {
+                "label": "Buscás al tacto",
+                "value": "K"
+              }
+            ]
+          },
+          {
+            "id": "e20",
+            "label": "Cuando tratás de recordar algo, ¿cómo lo hacés?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "A través de imágenes",
+                "value": "V"
+              },
+              {
+                "label": "A través de emociones",
+                "value": "K"
+              },
+              {
+                "label": "A través de sonidos",
+                "value": "A"
+              }
+            ]
+          },
+          {
+            "id": "e21",
+            "label": "Si tuvieras dinero, ¿qué harías?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Comprar una casa",
+                "value": "V"
+              },
+              {
+                "label": "Viajar y conocer el mundo",
+                "value": "K"
+              },
+              {
+                "label": "Adquirir un estudio de grabación",
+                "value": "A"
+              }
+            ]
+          },
+          {
+            "id": "e22",
+            "label": "¿Con qué frase te identificás más?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Reconozco a las personas por su voz",
+                "value": "A"
+              },
+              {
+                "label": "No recuerdo el aspecto de la gente",
+                "value": "K"
+              },
+              {
+                "label": "Recuerdo el aspecto de alguien, pero no su nombre",
+                "value": "V"
+              }
+            ]
+          },
+          {
+            "id": "e23",
+            "label": "Si tuvieras que quedarte en una isla desierta, ¿qué llevarías?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Algunos buenos libros",
+                "value": "V"
+              },
+              {
+                "label": "Un radio portátil de alta frecuencia",
+                "value": "A"
+              },
+              {
+                "label": "Golosinas y comida enlatada",
+                "value": "K"
+              }
+            ]
+          },
+          {
+            "id": "e24",
+            "label": "¿Cuál entretenimiento preferís?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Tocar un instrumento musical",
+                "value": "A"
+              },
+              {
+                "label": "Sacar fotografías",
+                "value": "V"
+              },
+              {
+                "label": "Actividades manuales",
+                "value": "K"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Experiencias y ambientes",
+        "description": "Elegí una sola opción, la que más se parezca a vos.",
+        "questions": [
+          {
+            "id": "e25",
+            "label": "¿Cómo es tu forma de vestir?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Impecable",
+                "value": "V"
+              },
+              {
+                "label": "Informal",
+                "value": "A"
+              },
+              {
+                "label": "Muy informal",
+                "value": "K"
+              }
+            ]
+          },
+          {
+            "id": "e26",
+            "label": "¿Qué es lo que más te gusta de una fogata nocturna?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "El calor del fuego y los bombones asados",
+                "value": "K"
+              },
+              {
+                "label": "El sonido del fuego quemando la leña",
+                "value": "A"
+              },
+              {
+                "label": "Mirar el fuego y las estrellas",
+                "value": "V"
+              }
+            ]
+          },
+          {
+            "id": "e27",
+            "label": "¿Cómo se te facilita entender algo?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Cuando te lo explican verbalmente",
+                "value": "A"
+              },
+              {
+                "label": "Cuando utilizan medios visuales",
+                "value": "V"
+              },
+              {
+                "label": "Cuando se realiza a través de alguna actividad",
+                "value": "K"
+              }
+            ]
+          },
+          {
+            "id": "e28",
+            "label": "¿Por qué te distinguís?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Por tener una gran intuición",
+                "value": "K"
+              },
+              {
+                "label": "Por ser un buen conversador",
+                "value": "A"
+              },
+              {
+                "label": "Por ser un buen observador",
+                "value": "V"
+              }
+            ]
+          },
+          {
+            "id": "e29",
+            "label": "¿Qué es lo que más disfrutás de un amanecer?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "La emoción de vivir un nuevo día",
+                "value": "K"
+              },
+              {
+                "label": "Las tonalidades del cielo",
+                "value": "V"
+              },
+              {
+                "label": "El canto de las aves",
+                "value": "A"
+              }
+            ]
+          },
+          {
+            "id": "e30",
+            "label": "Si pudieras elegir, ¿qué preferirías ser?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Un gran médico",
+                "value": "K"
+              },
+              {
+                "label": "Un gran músico",
+                "value": "A"
+              },
+              {
+                "label": "Un gran pintor",
+                "value": "V"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tu tendencia de aprendizaje",
+        "description": "Elegí una sola opción, la que más se parezca a vos.",
+        "questions": [
+          {
+            "id": "e31",
+            "label": "Cuando elegís tu ropa, ¿qué es lo más importante?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Que sea adecuada",
+                "value": "A"
+              },
+              {
+                "label": "Que luzca bien",
+                "value": "V"
+              },
+              {
+                "label": "Que sea cómoda",
+                "value": "K"
+              }
+            ]
+          },
+          {
+            "id": "e32",
+            "label": "¿Qué es lo que más disfrutás de una habitación?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Que sea silenciosa",
+                "value": "A"
+              },
+              {
+                "label": "Que sea confortable",
+                "value": "K"
+              },
+              {
+                "label": "Que esté limpia y ordenada",
+                "value": "V"
+              }
+            ]
+          },
+          {
+            "id": "e33",
+            "label": "¿Qué es más atractivo para vos?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Una iluminación tenue",
+                "value": "V"
+              },
+              {
+                "label": "El perfume",
+                "value": "K"
+              },
+              {
+                "label": "Cierto tipo de música",
+                "value": "A"
+              }
+            ]
+          },
+          {
+            "id": "e34",
+            "label": "¿A qué espectáculo preferirías asistir?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "A un concierto de música",
+                "value": "A"
+              },
+              {
+                "label": "A un espectáculo de magia",
+                "value": "V"
+              },
+              {
+                "label": "A una muestra gastronómica",
+                "value": "K"
+              }
+            ]
+          },
+          {
+            "id": "e35",
+            "label": "¿Qué te atrae más de una persona?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Su trato y forma de ser",
+                "value": "K"
+              },
+              {
+                "label": "Su aspecto físico",
+                "value": "V"
+              },
+              {
+                "label": "Su conversación",
+                "value": "A"
+              }
+            ]
+          },
+          {
+            "id": "e36",
+            "label": "Cuando vas de compras, ¿dónde pasás más tiempo?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "En una librería",
+                "value": "V"
+              },
+              {
+                "label": "En una perfumería",
+                "value": "K"
+              },
+              {
+                "label": "En una tienda de discos",
+                "value": "A"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Preferencias finales",
+        "description": "Elegí una sola opción, la que más se parezca a vos.",
+        "questions": [
+          {
+            "id": "e37",
+            "label": "¿Cuál es tu idea de una noche romántica?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "A la luz de las velas",
+                "value": "V"
+              },
+              {
+                "label": "Con música romántica",
+                "value": "A"
+              },
+              {
+                "label": "Bailando tranquilamente",
+                "value": "K"
+              }
+            ]
+          },
+          {
+            "id": "e38",
+            "label": "¿Qué es lo que más disfrutás de viajar?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Conocer personas y hacer nuevos amigos",
+                "value": "A"
+              },
+              {
+                "label": "Conocer lugares nuevos",
+                "value": "V"
+              },
+              {
+                "label": "Aprender sobre otras costumbres",
+                "value": "K"
+              }
+            ]
+          },
+          {
+            "id": "e39",
+            "label": "Cuando estás en la ciudad, ¿qué extrañás más del campo?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "El aire limpio y refrescante",
+                "value": "K"
+              },
+              {
+                "label": "Los paisajes",
+                "value": "V"
+              },
+              {
+                "label": "La tranquilidad",
+                "value": "A"
+              }
+            ]
+          },
+          {
+            "id": "e40",
+            "label": "Si te ofrecieran uno de estos empleos, ¿cuál elegirías?",
+            "type": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Director de una estación de radio",
+                "value": "A"
+              },
+              {
+                "label": "Director de un club deportivo",
+                "value": "K"
+              },
+              {
+                "label": "Director de una revista",
+                "value": "V"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "note": "El resultado describe tendencias, no una etiqueta fija. Podemos combinar distintos canales según la tarea y el contexto."
+  },
+  "ruta-decision": {
+    "kicker": "Guía reflexiva",
+    "title": "La ruta de la decisión",
+    "description": "Un enfoque estructurado para enfrentar un dilema, analizar tus opciones y avanzar con más confianza.",
+    "duration": "6–8 minutos",
+    "collectIdentity": true,
+    "resultType": "reflection",
+    "note": "Tomate tu tiempo. Podés cerrar y continuar más adelante desde este mismo dispositivo.",
+    "steps": [
+      {
+        "title": "1. Definir el problema",
+        "description": "Enfocate en lo que realmente importa y en las dimensiones del desafío.",
+        "questions": [
+          {
+            "id": "d1",
+            "label": "¿Cuál es el problema o la decisión específica que estás enfrentando?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "d2",
+            "label": "¿Qué impacto tiene este problema en tu vida o en otros aspectos importantes?",
+            "required": true,
+            "type": "textarea"
+          }
+        ]
+      },
+      {
+        "title": "2. Recopilar información",
+        "description": "Reuní datos y perspectivas que te permitan comprender mejor la situación.",
+        "questions": [
+          {
+            "id": "d3",
+            "label": "¿Cuáles son las opciones disponibles?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "d4",
+            "label": "¿Cuáles son las ventajas y desventajas de cada opción?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "d5",
+            "label": "¿Qué datos o hechos respaldan cada opción?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "d6",
+            "label": "¿Qué experiencias o consejos pueden ofrecer personas que tomaron decisiones similares?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "d7",
+            "label": "¿Existen personas expertas o recursos que puedan darte información adicional?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "d8",
+            "label": "¿Cuál es tu nivel de confianza en la información que reuniste?",
+            "required": true,
+            "type": "textarea"
+          }
+        ]
+      },
+      {
+        "title": "3. Analizar las opciones",
+        "description": "Reconocé lo que cada alternativa necesita y cómo te hace sentir.",
+        "questions": [
+          {
+            "id": "d9",
+            "label": "¿Cómo te sentís con respecto a cada opción?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "d10",
+            "label": "¿Qué recursos necesitás para implementar cada opción?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "d11",
+            "label": "¿Cuáles son las posibles consecuencias o resultados de cada opción?",
+            "required": true,
+            "type": "textarea"
+          }
+        ]
+      },
+      {
+        "title": "4. Elegir con intención",
+        "description": "Buscá la alternativa que mejor se alinee con tus necesidades, valores y metas.",
+        "questions": [
+          {
+            "id": "d12",
+            "label": "¿Cuál es tu opción preferida en este momento y por qué?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "d13",
+            "label": "¿Cómo se alinea esta decisión con tus valores personales y metas a largo plazo?",
+            "required": true,
+            "type": "textarea"
+          }
+        ]
+      },
+      {
+        "title": "5. Implementar y dar seguimiento",
+        "description": "Convertí la elección en acciones concretas y mantenete abierto o abierta a ajustar.",
+        "questions": [
+          {
+            "id": "d14",
+            "label": "¿Cuáles son los pasos concretos para implementar tu decisión?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "d15",
+            "label": "¿Cómo darás seguimiento a los resultados y ajustarás tu elección si es necesario?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "d16",
+            "label": "¿Cómo te sentís ahora después de recorrer esta ruta?",
+            "required": true,
+            "type": "textarea"
+          }
+        ]
+      }
+    ]
+  },
+  "proyecto-vida": {
+    "kicker": "Guía reflexiva",
+    "title": "Mi proyecto de vida",
+    "description": "Una ruta de seis pasos para conocerte, crear metas y convertirlas en acciones que tengan sentido para vos.",
+    "duration": "8–10 minutos",
+    "collectIdentity": true,
+    "resultType": "reflection",
+    "note": "Este proceso es personal. No necesitás tener todas las respuestas hoy; lo valioso es comenzar a nombrarlas.",
+    "steps": [
+      {
+        "title": "1. Conocerme",
+        "description": "Tu esencia es la base sobre la que construís tu proyecto.",
+        "questions": [
+          {
+            "id": "p1",
+            "label": "¿Cuáles son tus valores personales más importantes?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "p2",
+            "label": "¿Cuáles son tus fortalezas y las áreas que querés fortalecer?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "p3",
+            "label": "¿Qué te apasiona? ¿Cuáles son tus intereses y hobbies?",
+            "required": true,
+            "type": "textarea"
+          }
+        ]
+      },
+      {
+        "title": "2. Establecer metas",
+        "description": "Definí una dirección que te inspire y objetivos que puedas observar.",
+        "questions": [
+          {
+            "id": "p4",
+            "label": "¿Dónde te ves en cinco años en tu carrera y vida personal?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "p5",
+            "label": "¿Qué metas a corto plazo te gustaría lograr este año?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "p6",
+            "label": "¿Cuáles son tus metas financieras?",
+            "required": true,
+            "type": "textarea"
+          }
+        ]
+      },
+      {
+        "title": "3. Crear un plan",
+        "description": "Pasá de la intención a pasos concretos.",
+        "questions": [
+          {
+            "id": "p7",
+            "label": "¿Qué pasos específicos debés tomar para alcanzar tus metas a corto plazo?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "p8",
+            "label": "¿Cómo desarrollarás las habilidades y conocimientos que necesitan tus metas a largo plazo?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "p9",
+            "label": "¿Qué recursos necesitás para lograr tus metas?",
+            "required": true,
+            "type": "textarea"
+          }
+        ]
+      },
+      {
+        "title": "4. Superar obstáculos",
+        "description": "Anticipá dificultades y prepará estrategias para sostenerte.",
+        "questions": [
+          {
+            "id": "p10",
+            "label": "¿Qué desafíos anticipás en el camino hacia tus metas?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "p11",
+            "label": "¿Cómo planeás enfrentar y superar esos obstáculos?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "p12",
+            "label": "¿Qué estrategias usarás cuando te sintás sin motivación o encontrés dificultades?",
+            "required": true,
+            "type": "textarea"
+          }
+        ]
+      },
+      {
+        "title": "5. Revisar y ajustar",
+        "description": "Ser flexible también es avanzar.",
+        "questions": [
+          {
+            "id": "p13",
+            "label": "¿Con qué frecuencia revisarás tu progreso?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "p14",
+            "label": "¿Estás dispuesto o dispuesta a ajustar tus metas? ¿Bajo qué circunstancias?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "p15",
+            "label": "¿Qué señales indicarían que es hora de hacer ajustes?",
+            "required": true,
+            "type": "textarea"
+          }
+        ]
+      },
+      {
+        "title": "6. Celebrar los logros",
+        "description": "Reconocer cada avance alimenta tu motivación.",
+        "questions": [
+          {
+            "id": "p16",
+            "label": "¿Cómo te recompensarás cuando alcancés tus metas?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "p17",
+            "label": "¿Cómo celebrarás tus logros, grandes o pequeños?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "p18",
+            "label": "¿Qué importancia tiene para vos celebrar tus éxitos?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "p19",
+            "label": "¿Cómo te sentís ahora después de recorrer estos pasos?",
+            "required": true,
+            "type": "textarea"
+          }
+        ]
+      }
+    ]
+  },
+  "ficha-tecnica": {
+    "kicker": "Información inicial privada",
+    "title": "Ficha técnica",
+    "description": "Estos datos permiten abrir tu expediente y preparar un acompañamiento más cuidadoso desde el primer encuentro.",
+    "duration": "5 minutos",
+    "collectIdentity": false,
+    "resultType": "submission",
+    "sensitive": true,
+    "note": "Esta ficha incluye información personal. Solo será enviada al confirmar y debe almacenarse con acceso privado. Si se trata de una persona menor de edad, completá también los datos de la persona responsable.",
+    "steps": [
+      {
+        "title": "1. Datos de la persona",
+        "description": "Información básica para identificar el expediente.",
+        "questions": [
+          {
+            "id": "nombre",
+            "label": "Nombre completo",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "id": "cedula",
+            "label": "Número de cédula",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "id": "nacimiento",
+            "label": "Fecha de nacimiento",
+            "required": true,
+            "type": "date"
+          },
+          {
+            "id": "correo",
+            "label": "Correo de la persona o responsable si es menor",
+            "required": true,
+            "type": "email"
+          }
+        ]
+      },
+      {
+        "title": "2. Persona responsable",
+        "description": "Completá esta parte únicamente si la persona atendida es menor de edad.",
+        "questions": [
+          {
+            "id": "responsable_nombre",
+            "label": "Nombre completo de la persona responsable",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "id": "responsable_telefono",
+            "label": "Teléfono de la persona responsable",
+            "required": false,
+            "type": "tel"
+          },
+          {
+            "id": "responsable_cedula",
+            "label": "Cédula de la persona responsable",
+            "required": false,
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "title": "3. Contexto actual",
+        "description": "Contanos un poco sobre tu lugar de residencia y etapa actual.",
+        "questions": [
+          {
+            "id": "residencia",
+            "label": "Lugar de residencia: provincia, cantón y distrito",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "educacion",
+            "label": "Nivel educativo",
+            "type": "select",
+            "required": true,
+            "options": [
+              {
+                "label": "Primaria incompleta",
+                "value": "Primaria incompleta"
+              },
+              {
+                "label": "Primaria completa",
+                "value": "Primaria completa"
+              },
+              {
+                "label": "Secundaria incompleta",
+                "value": "Secundaria incompleta"
+              },
+              {
+                "label": "Secundaria completa",
+                "value": "Secundaria completa"
+              },
+              {
+                "label": "Universidad incompleta",
+                "value": "Universidad incompleta"
+              },
+              {
+                "label": "Universidad completa",
+                "value": "Universidad completa"
+              }
+            ]
+          },
+          {
+            "id": "grado",
+            "label": "Si estudiás actualmente, ¿qué grado o año cursás?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "id": "ocupacion",
+            "label": "Ocupación actual",
+            "required": true,
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "title": "4. Motivo del proceso",
+        "description": "Esta información ayuda a preparar el primer encuentro.",
+        "questions": [
+          {
+            "id": "tipo_proceso",
+            "label": "Tipo de proceso",
+            "type": "select",
+            "required": true,
+            "options": [
+              {
+                "label": "Psicopedagogía",
+                "value": "Psicopedagogía"
+              },
+              {
+                "label": "Orientación",
+                "value": "Orientación"
+              },
+              {
+                "label": "Ambos",
+                "value": "Ambos"
+              },
+              {
+                "label": "No tengo claridad todavía",
+                "value": "No tengo claridad todavía"
+              }
+            ]
+          },
+          {
+            "id": "motivo",
+            "label": "Motivo de consulta",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "expectativas",
+            "label": "¿Qué esperás de este proceso?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "id": "actividades",
+            "label": "¿Qué actividades disfrutás?",
+            "type": "checkbox",
+            "required": false,
+            "options": [
+              {
+                "label": "Dibujar",
+                "value": "Dibujar"
+              },
+              {
+                "label": "Escribir",
+                "value": "Escribir"
+              },
+              {
+                "label": "Jugar",
+                "value": "Jugar"
+              },
+              {
+                "label": "Otra",
+                "value": "Otra"
+              }
+            ]
+          },
+          {
+            "id": "comentario",
+            "label": "¿Querés agregar algún comentario?",
+            "required": false,
+            "type": "textarea"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -366,7 +366,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--blue); box-shado
 .post-actions { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8rem; margin-top: 2.5rem; }
 .comments-section { margin-top: 1.2rem; padding: clamp(1.3rem, 4vw, 2.4rem); border-radius: var(--radius-lg); }
 .comment-form { display: grid; gap: .9rem; }
-.comment-form .honeypot { position: absolute; left: -10000px; }
+.honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
 .comments-list { display: grid; gap: .8rem; margin-top: 1.5rem; }
 .comment { padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.76); }
 .comment-header { display: flex; justify-content: space-between; gap: .8rem; }
