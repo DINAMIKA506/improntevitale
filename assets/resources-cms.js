@@ -2,6 +2,13 @@
   const catalog = document.querySelector("[data-resource-catalog]");
   if (!catalog) return;
   const escapeText = (value) => String(value || "");
+  const resourceCovers = {
+    "madurez-vocacional": "/assets/recurso-madurez-vocacional.webp",
+    "estilos-aprendizaje": "/assets/recurso-estilos-aprendizaje.webp",
+    "ruta-decision": "/assets/recurso-ruta-decision.webp",
+    "proyecto-vida": "/assets/recurso-proyecto-vida.webp",
+    "ficha-tecnica": "/assets/recurso-ficha-tecnica.webp"
+  };
   fetch("/api/resources")
     .then((response) => response.ok ? response.json() : Promise.reject())
     .then(({ result }) => {
@@ -15,6 +22,17 @@
           catalog.append(card);
         }
         card.replaceChildren();
+        const coverUrl = resourceCovers[resource.id];
+        if (coverUrl) {
+          const cover = document.createElement("img");
+          cover.className = "resource-cover";
+          cover.src = coverUrl;
+          cover.alt = `Portada de ${escapeText(resource.title)}`;
+          cover.width = 1000;
+          cover.height = 519;
+          if (index > 0) cover.loading = "lazy";
+          card.append(cover);
+        }
         const indexRow = document.createElement("div"); indexRow.className = "resource-index";
         const number = document.createElement("span"); number.textContent = String(index + 1).padStart(2, "0");
         const duration = document.createElement("span"); duration.textContent = escapeText(resource.duration);

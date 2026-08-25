@@ -7,6 +7,13 @@
   let resource = window.IMPRONTE_RESOURCES[resourceId] || null;
   const frame = root.querySelector(".resource-frame");
   const storageKey = `impronte-resource-${resourceId}`;
+  const resourceCovers = {
+    "madurez-vocacional": "/assets/recurso-madurez-vocacional.webp",
+    "estilos-aprendizaje": "/assets/recurso-estilos-aprendizaje.webp",
+    "ruta-decision": "/assets/recurso-ruta-decision.webp",
+    "proyecto-vida": "/assets/recurso-proyecto-vida.webp",
+    "ficha-tecnica": "/assets/recurso-ficha-tecnica.webp"
+  };
   let currentStep = -1;
   let answers = {};
 
@@ -36,8 +43,10 @@
   }
 
   function renderIntro() {
+    const cover = resourceCovers[resourceId];
     frame.innerHTML = `
       <div class="resource-intro">
+        ${cover ? `<img class="resource-intro-cover" src="${cover}" alt="Portada de ${escapeHtml(resource.title)}" width="1000" height="519">` : ""}
         <p class="resource-kicker">${escapeHtml(resource.kicker)}</p>
         <h1 class="resource-title">${escapeHtml(resource.title)}</h1>
         <p class="lead">${escapeHtml(resource.description)}</p>
