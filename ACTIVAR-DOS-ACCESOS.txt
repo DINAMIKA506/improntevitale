@@ -1,0 +1,55 @@
+ACTIVAR DOS ACCESOS AL CRM DE IMPRONTE VITALE
+
+El acceso al panel de Supabase con GitHub y el acceso al CRM son cuentas
+distintas. Entrar a Supabase como Ordy permite administrar el proyecto, pero no
+crea automáticamente una usuaria dentro del CRM.
+
+1. SUBIR LA VERSIÓN ACTUALIZADA
+
+Sustituí en GitHub todo el contenido del proyecto por el contenido de este
+paquete. Confirmá los cambios y esperá que Vercel termine el deployment.
+
+2. CREAR LA CUENTA QUE SÍ CONTROLÁS
+
+En Supabase abrí Authentication > Users.
+Elegí Add user > Create new user.
+Escribí tu correo controlado y una contraseña privada de al menos 12 caracteres.
+Guardá la contraseña en un gestor seguro.
+
+3. CONFIRMAR LA CUENTA SIN MOSTRAR CONTRASEÑAS
+
+En SQL Editor ejecutá esta consulta, reemplazando TU-CORREO por el correo creado:
+
+select
+  email,
+  email_confirmed_at is not null as correo_confirmado,
+  encrypted_password is not null
+    and length(encrypted_password) > 0 as tiene_contrasena
+from auth.users
+where lower(email) = lower('TU-CORREO');
+
+Ambos resultados deben ser true.
+
+4. AUTORIZAR LOS DOS CORREOS EN VERCEL
+
+En el proyecto improntevitale abrí Environment Variables y agregá:
+
+Nombre:
+ADMIN_EMAILS
+
+Valor:
+improntevitale.orx@gmail.com,TU-CORREO-CONTROLADO
+
+No usés comillas. Separá las direcciones con una coma. Seleccioná Production y
+guardá. Conservá también la variable ADMIN_EMAIL existente.
+
+5. PUBLICAR Y PROBAR
+
+En Vercel abrí Deployments, elegí los tres puntos del último deployment y
+presioná Redeploy. Esperá el estado Ready.
+
+Abrí https://improntevitale.vercel.app/admin/
+El campo de correo ahora será editable. Ingresá tu correo controlado y su propia
+contraseña. Cada administradora usa su correo y contraseña; no se comparten.
+
+No subás contraseñas ni llaves a GitHub y no las envíes por capturas o mensajes.

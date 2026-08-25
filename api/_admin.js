@@ -2,9 +2,25 @@ const { getConfig } = require("./_supabase");
 
 const ACCESS_COOKIE = "iv_admin_access";
 const REFRESH_COOKIE = "iv_admin_refresh";
+const DEFAULT_ADMIN_EMAIL = "improntevitale.orx@gmail.com";
 
 function allowedEmail() {
-  return String(process.env.ADMIN_EMAIL || "improntevitale.orx@gmail.com").trim().toLowerCase();
+  return Array.from(allowedEmails())[0] || DEFAULT_ADMIN_EMAIL;
+}
+
+function allowedEmails() {
+  const configured = [process.env.ADMIN_EMAILS, process.env.ADMIN_EMAIL]
+    .filter(Boolean)
+    .join(",");
+  const values = (configured || DEFAULT_ADMIN_EMAIL)
+    .split(/[,;\n]/)
+    .map((email) => String(email).trim().toLowerCase())
+    .filter((email) => /^\S+@\S+\.\S+$/.test(email));
+  return new Set(values.length ? values : [DEFAULT_ADMIN_EMAIL]);
+}
+
+function isAllowedEmail(email) {
+  return allowedEmails().has(String(email || "").trim().toLowerCase());
 }
 
 function parseCookies(req) {
@@ -97,7 +113,7 @@ async function requireAdmin(req, res) {
     }
   }
 
-  if (!user || String(user.email || "").toLowerCase() !== allowedEmail()) {
+  if (!user || !isAllowedEmail(user.email)) {
     const error = new Error("Sesión no autorizada.");
     error.statusCode = 401;
     throw error;
@@ -107,6 +123,8 @@ async function requireAdmin(req, res) {
 
 module.exports = {
   allowedEmail,
+  allowedEmails,
+  isAllowedEmail,
   sameOrigin,
   authRequest,
   requireAdmin,

@@ -6,6 +6,10 @@ https://improntevitale.vercel.app/admin/
 Cuenta autorizada:
 improntevitale.orx@gmail.com
 
+El paquete actualizado también acepta una lista cerrada de administradores
+mediante ADMIN_EMAILS. Esto permite usar un segundo correo controlado sin
+habilitar registros públicos.
+
 IMPORTANTE
 La contraseña no viene escrita en este paquete. Se crea directamente en
 Supabase para que nunca aparezca en GitHub ni dentro de la página.
@@ -41,6 +45,9 @@ PARTE 2 — CREAR LA USUARIA ADMINISTRADORA
    abrí el mensaje recibido y terminá de definir la contraseña desde el enlace.
 6. Guardá la contraseña en un gestor de contraseñas; no la subás a GitHub.
 
+Para crear un segundo acceso, repetí los pasos 2 a 6 con un correo que sí
+controlés. Cada correo tendrá su propia contraseña.
+
 No habilités el registro público. El CRM solo permite entrar a ese correo.
 
 PARTE 3 — COPIAR LAS TRES LLAVES DE SUPABASE
@@ -72,6 +79,12 @@ PARTE 4 — CONFIGURAR VERCEL
 
    ADMIN_EMAIL
    Valor: improntevitale.orx@gmail.com
+
+   ADMIN_EMAILS
+   Valor: improntevitale.orx@gmail.com,SEGUNDO-CORREO-QUE-CONTROLES
+
+   ADMIN_EMAILS es la lista cerrada que usa el CRM. Separá los correos con
+   comas, sin comillas. Mantené ADMIN_EMAIL por compatibilidad.
 
 4. No agregués la contraseña como variable de Vercel.
 

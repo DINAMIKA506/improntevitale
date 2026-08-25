@@ -1,5 +1,5 @@
 const { json, bodyObject } = require("../_supabase");
-const { allowedEmail, sameOrigin, authRequest } = require("../_admin");
+const { isAllowedEmail, sameOrigin, authRequest } = require("../_admin");
 
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") return json(res, 405, { message: "Método no permitido." });
@@ -10,7 +10,7 @@ module.exports = async function handler(req, res) {
   if (!accessToken || password.length < 12) return json(res, 400, { message: "La contraseña debe tener al menos 12 caracteres." });
   try {
     const user = await authRequest("user", { headers: { Authorization: `Bearer ${accessToken}` } });
-    if (String(user.email || "").toLowerCase() !== allowedEmail()) return json(res, 403, { message: "Esta invitación no tiene acceso al CRM." });
+    if (!isAllowedEmail(user.email)) return json(res, 403, { message: "Esta invitación no tiene acceso al CRM." });
     await authRequest("user", { method: "PUT", headers: { Authorization: `Bearer ${accessToken}` }, body: JSON.stringify({ password }) });
     return json(res, 200, { ok: true, email: user.email });
   } catch (_) {

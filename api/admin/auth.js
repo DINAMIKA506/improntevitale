@@ -1,5 +1,5 @@
 const { json, clientIp, bodyObject } = require("../_supabase");
-const { allowedEmail, sameOrigin, authRequest, requireAdmin, setSessionCookies, clearSessionCookies } = require("../_admin");
+const { isAllowedEmail, sameOrigin, authRequest, requireAdmin, setSessionCookies, clearSessionCookies } = require("../_admin");
 
 const attempts = globalThis.__impronteAdminLoginAttempts || new Map();
 globalThis.__impronteAdminLoginAttempts = attempts;
@@ -28,19 +28,23 @@ module.exports = async function handler(req, res) {
     const body = bodyObject(req);
     const email = String(body.email || "").trim().toLowerCase();
     const password = String(body.password || "");
-    if (email !== allowedEmail() || password.length < 8) return json(res, 401, { message: "Correo o contraseña incorrectos." });
+    if (!isAllowedEmail(email) || password.length < 8) return json(res, 401, { message: "Correo o contraseña incorrectos." });
     try {
       const session = await authRequest("token?grant_type=password", {
         method: "POST",
         body: JSON.stringify({ email, password })
       });
-      if (String(session.user?.email || "").toLowerCase() !== allowedEmail()) {
+      if (!isAllowedEmail(session.user?.email)) {
         return json(res, 403, { message: "Esta cuenta no tiene acceso al CRM." });
       }
       setSessionCookies(req, res, session);
       attempts.delete(clientIp(req));
       return json(res, 200, { authenticated: true, email: session.user.email });
-    } catch (_) {
+    } catch (error) {
+      console.error("[admin/auth] Supabase rechazó el inicio de sesión", {
+        statusCode: Number(error?.statusCode || 0),
+        message: String(error?.message || "Error desconocido").slice(0, 180)
+      });
       return json(res, 401, { message: "Correo o contraseña incorrectos." });
     }
   }
