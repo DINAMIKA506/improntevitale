@@ -1,0 +1,20 @@
+CORRECCIÓN VISUAL DEL DOMINIO PRINCIPAL
+
+Este paquete conserva el sitio completo y corrige la diferencia visual entre:
+- https://improntevitale.vercel.app/
+- la vista previa temporal de Vercel
+
+Qué se corrigió:
+1. Todas las páginas usan /assets/site-v3.css y /assets/site-v3.js.
+2. Se retiró la regla que guardaba archivos sin versión durante un año.
+3. El nuevo nombre obliga a los navegadores a descargar el diseño correcto.
+
+Cómo publicarlo:
+1. Descomprimí este paquete en tu computadora.
+2. En el repositorio de GitHub, subí TODO el contenido descomprimido respetando las carpetas.
+3. Confirmá los cambios con Commit changes.
+4. Esperá a que Vercel marque el nuevo deployment como Ready.
+5. Abrí https://improntevitale.vercel.app/ y presioná Ctrl + F5 una vez.
+
+No subás únicamente este archivo ni el ZIP sin descomprimir. GitHub debe recibir
+index.html, vercel.json, assets/, blog/, recursos/ y las demás carpetas.

@@ -1,29 +1,34 @@
-MIGRACIÓN DE IMPRONTE VITALE A GITHUB Y VERCEL
+ACTUALIZACIÓN PROFESIONAL DE IMPRONTE VITALE
 
-CONTENIDO INCLUIDO
-- Página de Inicio.
-- Página General con servicios, recursos, testimonios y enlaces.
-- Página Conversemos con formulario que abre WhatsApp.
-- Blog y tres artículos principales.
-- Fotografías y logotipo del sitio original.
-- Portada profesional para compartir en WhatsApp y redes.
-- Configuración SEO inicial, sitemap, robots.txt, página 404 y ajustes de seguridad.
+QUÉ INCLUYE
+- Nueva línea gráfica basada en el manual de marca.
+- Diseño adaptable a computadora y celular.
+- Todos los botones “Agendar sesión 1:1” conectados con WhatsApp 8943-7609.
+- Blog renovado, buscador, filtros y comentarios moderados.
+- Cinco recursos interactivos internos con etapas y progreso.
+- Base técnica para administrar publicaciones desde Sanity.
+- Base privada en Supabase para comentarios, formularios y ficha técnica.
+- Aviso de privacidad, SEO, sitemap y portada social.
 
-SUBIR A GITHUB
-1. Cree un repositorio nuevo llamado impronte-vitale.
-2. Abra Add file > Upload files.
-3. Suba TODO el contenido de esta carpeta a la raíz del repositorio.
-4. Confirme con Commit changes.
+ACTUALIZAR GITHUB Y VERCEL
+1. Descargue y descomprima el ZIP entregado.
+2. En el repositorio actual de GitHub reemplace los archivos existentes por TODO el contenido de esta carpeta.
+3. Confirme los cambios en la rama main.
+4. Vercel volverá a publicar automáticamente la página.
 
-CONECTAR CON VERCEL
-1. En Vercel seleccione Add New > Project.
-2. Importe el repositorio impronte-vitale.
-3. En Framework Preset seleccione Other.
-4. Deje Build Command y Output Directory vacíos.
-5. Pulse Deploy.
+MUY IMPORTANTE
+- El diseño, las páginas, los tests y las guías funcionan apenas se publique.
+- Para RECIBIR respuestas y comentarios falta la conexión de Supabase.
+- Para AGREGAR artículos sin tocar código falta la conexión de Sanity.
+- Los pasos completos están en CRM-Y-CONTENIDO.md.
+- Nunca suba a GitHub las llaves privadas de Supabase.
 
-IMPORTANTE DESPUÉS DE PUBLICAR
-- El proyecto está preparado para usar https://impronte-vitale.vercel.app como dirección inicial.
-- Si Vercel asigna otra dirección o conecta un dominio propio, reemplace esa dirección en los archivos HTML, robots.txt y sitemap.xml.
-- Cree una propiedad nueva de Google Analytics para este sitio. No reutilice la medición de Grúas Abangareñas.
-- El formulario no guarda información en una base de datos: abre WhatsApp al 8943-7609 con el mensaje preparado.
+PRIMERA PRUEBA
+1. Abra el sitio publicado en una ventana privada.
+2. Pruebe Inicio, Servicios, Recursos, Blog y Contacto.
+3. Confirme que el botón Agendar abre el número +506 8943 7609.
+4. Pruebe un recurso hasta el final.
+5. Después de conectar Supabase, apruebe un comentario de prueba.
+
+PRIVACIDAD
+Antes de recopilar fichas reales, complete y revise la página /privacidad/ con la identificación legal y reglas de conservación definitivas de Impronte Vitale.
