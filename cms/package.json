@@ -1,0 +1,8 @@
+{
+  "name": "impronte-vitale-cms",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "sanity dev", "deploy": "sanity deploy" },
+  "dependencies": { "@sanity/vision": "latest", "sanity": "latest", "styled-components": "latest" },
+  "devDependencies": {}
+}
