@@ -220,7 +220,7 @@ h3 { font-size: 1.22rem; letter-spacing: -.025em; }
   background: rgba(22,47,86,.08);
 }
 .trust-item { min-height: 330px; padding: .75rem .75rem 1.25rem; border-radius: 20px; text-align: center; background: rgba(255,255,255,.82); }
-.trust-image { width: 100%; aspect-ratio: 5 / 4; margin-bottom: 1rem; border-radius: 16px; object-fit: cover; }
+.trust-image { width: 100%; height: auto; aspect-ratio: 5 / 4; margin-bottom: 1rem; border-radius: 16px; object-fit: contain; }
 .trust-item strong { display: block; margin-bottom: .25rem; color: var(--navy); font-size: 1.1rem; }
 .trust-item span { color: var(--muted); font-size: .9rem; }
 
@@ -252,7 +252,7 @@ h3 { font-size: 1.22rem; letter-spacing: -.025em; }
 .resource-card:nth-child(1), .resource-card:nth-child(4) { grid-column: span 5; }
 .resource-card:nth-child(2), .resource-card:nth-child(5) { grid-column: span 4; }
 .resource-card:nth-child(3) { grid-column: span 3; }
-.resource-cover { width: 100%; aspect-ratio: 1000 / 519; margin-bottom: 1rem; border-radius: 20px; box-shadow: 0 12px 30px rgba(22,47,86,.1); object-fit: cover; }
+.resource-cover { width: 100%; height: auto; aspect-ratio: 1000 / 519; margin-bottom: 1rem; border-radius: 20px; box-shadow: 0 12px 30px rgba(22,47,86,.1); object-fit: contain; }
 .resource-index { display: flex; align-items: center; justify-content: space-between; margin-bottom: .9rem; }
 .resource-index span:first-child { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 15px; color: #fff; background: var(--rose); font-weight: 800; }
 .resource-index span:last-child { color: var(--muted); font-size: .78rem; }
@@ -264,6 +264,7 @@ h3 { font-size: 1.22rem; letter-spacing: -.025em; }
 .portrait-stack .main-photo { position: absolute; inset: 0 12% 0 0; width: 78%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
 .portrait-stack .mini-photo { position: absolute; right: 0; bottom: 8%; width: 44%; aspect-ratio: 1; object-fit: cover; border: 10px solid rgba(255,255,255,.88); border-radius: 50%; box-shadow: var(--shadow-sm); }
 .portrait-stack .mini-photo.is-cutout { background: transparent; object-fit: contain; }
+.portrait-stack.single-photo .main-photo { inset: 0; width: 100%; }
 .split-copy { padding: clamp(1rem, 3vw, 3rem); border-radius: var(--radius-lg); }
 .feature-list { display: grid; gap: .75rem; margin: 1.5rem 0; padding: 0; list-style: none; }
 .feature-list li { display: flex; gap: .7rem; }
@@ -389,7 +390,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--blue); box-shado
 .resource-frame { min-height: 580px; padding: clamp(1.3rem, 4vw, 3rem); border-radius: var(--radius-lg); }
 .resource-kicker { color: var(--blue); font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .resource-title { font-size: clamp(2.15rem, 5vw, 3.6rem); }
-.resource-intro-cover { width: 100%; aspect-ratio: 1000 / 519; margin-bottom: 1.5rem; border-radius: 22px; box-shadow: var(--shadow-sm); object-fit: cover; }
+.resource-intro-cover { width: 100%; height: auto; aspect-ratio: 1000 / 519; margin-bottom: 1.5rem; border-radius: 22px; box-shadow: var(--shadow-sm); object-fit: contain; }
 .resource-intro p { color: var(--muted); }
 .resource-meta { display: flex; flex-wrap: wrap; gap: .55rem; margin: 1.3rem 0; }
 .resource-meta span { padding: .45rem .7rem; border-radius: 999px; color: var(--navy); background: rgba(250,214,222,.58); font-size: .8rem; font-weight: 700; }
