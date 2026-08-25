@@ -15,7 +15,7 @@
   const state = { currentView: "overview", cache: {}, modalHandler: null, resourceDraft: null };
   const inviteParams = new URLSearchParams(location.hash.replace(/^#/, ""));
   const inviteToken = ["invite", "recovery"].includes(inviteParams.get("type")) ? inviteParams.get("access_token") : "";
-  const builtins = new Set(["madurez-vocacional", "estilos-aprendizaje", "ruta-decision", "proyecto-vida", "ficha-tecnica"]);
+  const builtins = new Set(["madurez-vocacional", "estilos-aprendizaje", "ruta-decision", "proyecto-vida", "creando-mi-ikigai", "ficha-tecnica"]);
   const views = {
     overview: ["Panel general", "Hola, Valerie"],
     leads: ["Relaciones", "Consultas recibidas"],
@@ -36,7 +36,14 @@
     "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
   })[character]);
   const slugify = (value) => String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 80);
-  const prettyKey = (value) => String(value || "").replace(/[_-]+/g, " ").replace(/^./, (letter) => letter.toUpperCase());
+  const answerLabels = {
+    ik_love: "Lo que ama",
+    ik_good: "En lo que es buena/o",
+    ik_world: "Lo que el mundo necesita",
+    ik_paid: "Por lo que pueden pagarle",
+    ik_core: "Su Ikigai"
+  };
+  const prettyKey = (value) => answerLabels[value] || String(value || "").replace(/[_-]+/g, " ").replace(/^./, (letter) => letter.toUpperCase());
   const formatDate = (value, withTime = false) => {
     const date = new Date(value);
     if (Number.isNaN(date.getTime())) return "—";
@@ -393,7 +400,7 @@
     const isNew = !item;
     state.resourceDraft = normalizeResource(item);
     const draft = state.resourceDraft;
-    showModal(isNew ? "Nuevo recurso" : "Editar recurso", `<div class="field-grid"><label class="field">Dirección corta<input name="id" required pattern="[a-z0-9][a-z0-9-]{1,78}[a-z0-9]" value="${escapeHtml(draft.id)}" ${isNew ? "" : "readonly"}></label><label class="field">Etiqueta<input name="kicker" value="${escapeHtml(draft.kicker)}"></label><label class="field field-wide">Nombre del recurso<input name="title" required value="${escapeHtml(draft.title)}"></label><label class="field field-wide">Descripción<textarea name="description">${escapeHtml(draft.description)}</textarea></label><label class="field">Duración<input name="duration" value="${escapeHtml(draft.duration)}"></label><label class="field">Orden<input name="sort_order" type="number" min="0" max="999" value="${escapeHtml(draft.sort_order)}"></label><label class="field">Tipo de resultado<select name="result_type"><option value="reflection">Reflexión</option><option value="submission">Solo envío</option><option value="maturity">Puntaje de madurez</option><option value="learning">Estilos de aprendizaje</option></select></label><label class="inline-check"><input name="collect_identity" type="checkbox" ${draft.config.collectIdentity ? "checked" : ""}> Solicitar nombre al inicio</label><label class="inline-check"><input name="sensitive" type="checkbox" ${draft.config.sensitive ? "checked" : ""}> Contiene información sensible</label><label class="inline-check"><input name="enabled" type="checkbox" ${draft.enabled ? "checked" : ""}> Visible en la página</label><label class="field field-wide">Nota para la persona<textarea name="note">${escapeHtml(draft.note)}</textarea></label></div><div class="panel-header" style="margin-top:1.4rem"><div><h3>Etapas y preguntas</h3><p class="editor-help">Abrí cada etapa para editar sus preguntas.</p></div><button class="crm-secondary" type="button" data-resource-action="add-step">+ Agregar etapa</button></div><div data-resource-steps></div>`, isNew ? "Crear recurso" : "Guardar recurso", async (form) => {
+    showModal(isNew ? "Nuevo recurso" : "Editar recurso", `<div class="field-grid"><label class="field">Dirección corta<input name="id" required pattern="[a-z0-9][a-z0-9-]{1,78}[a-z0-9]" value="${escapeHtml(draft.id)}" ${isNew ? "" : "readonly"}></label><label class="field">Etiqueta<input name="kicker" value="${escapeHtml(draft.kicker)}"></label><label class="field field-wide">Nombre del recurso<input name="title" required value="${escapeHtml(draft.title)}"></label><label class="field field-wide">Descripción<textarea name="description">${escapeHtml(draft.description)}</textarea></label><label class="field">Duración<input name="duration" value="${escapeHtml(draft.duration)}"></label><label class="field">Orden<input name="sort_order" type="number" min="0" max="999" value="${escapeHtml(draft.sort_order)}"></label><label class="field">Tipo de resultado<select name="result_type"><option value="reflection">Reflexión</option><option value="submission">Solo envío</option><option value="maturity">Puntaje de madurez</option><option value="learning">Estilos de aprendizaje</option><option value="ikigai">Mapa de Ikigai</option></select></label><label class="inline-check"><input name="collect_identity" type="checkbox" ${draft.config.collectIdentity ? "checked" : ""}> Solicitar nombre al inicio</label><label class="inline-check"><input name="sensitive" type="checkbox" ${draft.config.sensitive ? "checked" : ""}> Contiene información sensible</label><label class="inline-check"><input name="enabled" type="checkbox" ${draft.enabled ? "checked" : ""}> Visible en la página</label><label class="field field-wide">Nota para la persona<textarea name="note">${escapeHtml(draft.note)}</textarea></label></div><div class="panel-header" style="margin-top:1.4rem"><div><h3>Etapas y preguntas</h3><p class="editor-help">Abrí cada etapa para editar sus preguntas.</p></div><button class="crm-secondary" type="button" data-resource-action="add-step">+ Agregar etapa</button></div><div data-resource-steps></div>`, isNew ? "Crear recurso" : "Guardar recurso", async (form) => {
       const body = {
         id: slugify(form.get("id")), kicker: form.get("kicker"), title: form.get("title"), description: form.get("description"), duration: form.get("duration"), note: form.get("note"), sort_order: form.get("sort_order"), enabled: form.has("enabled"),
         config: { ...state.resourceDraft.config, collectIdentity: form.has("collect_identity"), sensitive: form.has("sensitive"), resultType: form.get("result_type") }

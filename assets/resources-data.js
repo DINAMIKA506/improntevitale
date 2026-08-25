@@ -190,6 +190,32 @@
         { title: "6. Celebrar los logros", description: "Reconocer cada avance alimenta tu motivación.", questions: [text("p16","¿Cómo te recompensarás cuando alcancés tus metas?"), text("p17","¿Cómo celebrarás tus logros, grandes o pequeños?"), text("p18","¿Qué importancia tiene para vos celebrar tus éxitos?"), text("p19","¿Cómo te sentís ahora después de recorrer estos pasos?")] }
       ]
     },
+    "creando-mi-ikigai": {
+      kicker: "Mapa de propósito",
+      title: "Creando mi ikigai",
+      description: "Explorá lo que amás, tus fortalezas, lo que el mundo necesita y las formas en que podés aportar valor para construir tu propio mapa de propósito.",
+      duration: "8–10 minutos",
+      collectIdentity: true,
+      resultType: "ikigai",
+      note: "No necesitás encontrar una respuesta perfecta. Escribí ideas concretas y personales; al finalizar podrás descargar tu mapa de Ikigai.",
+      steps: [
+        { title: "1. Lo que amás", description: "Pensá en aquello que despierta tu alegría, curiosidad y energía.", questions: [
+          { id: "ik_love", label: "¿Qué actividades, temas o experiencias te hacen sentir con energía, alegría y ganas de seguir?", type: "textarea", required: true, maxLength: 220 }
+        ]},
+        { title: "2. En lo que sos buena o bueno", description: "Reconocé capacidades que ya usás y otras que las personas ven en vos.", questions: [
+          { id: "ik_good", label: "¿Qué habilidades, fortalezas o talentos reconocés en vos?", type: "textarea", required: true, maxLength: 220 }
+        ]},
+        { title: "3. Lo que el mundo necesita", description: "Observá necesidades de personas, comunidades o entornos que te importan.", questions: [
+          { id: "ik_world", label: "¿Qué necesidad, problema o causa te gustaría ayudar a transformar?", type: "textarea", required: true, maxLength: 220 }
+        ]},
+        { title: "4. Por lo que podrían pagarte", description: "Conectá tus capacidades con servicios, trabajos o soluciones que generan valor.", questions: [
+          { id: "ik_paid", label: "¿Qué podrías ofrecer como trabajo, servicio o producto por lo que alguien estaría dispuesto a pagarte?", type: "textarea", required: true, maxLength: 220 }
+        ]},
+        { title: "5. El punto de encuentro", description: "Releé tus respuestas y nombrá el hilo que las conecta.", questions: [
+          { id: "ik_core", label: "Al unir todo lo anterior, ¿cómo describirías en una frase el aporte que querés hacer?", type: "textarea", required: true, maxLength: 180 }
+        ]}
+      ]
+    },
     "ficha-tecnica": {
       kicker: "Información inicial privada",
       title: "Ficha técnica",

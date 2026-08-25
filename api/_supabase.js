@@ -3,6 +3,7 @@ const builtinResources = new Set([
   "estilos-aprendizaje",
   "ruta-decision",
   "proyecto-vida",
+  "creando-mi-ikigai",
   "ficha-tecnica"
 ]);
 

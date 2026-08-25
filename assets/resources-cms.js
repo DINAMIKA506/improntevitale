@@ -9,6 +9,14 @@
     "proyecto-vida": "/assets/recurso-proyecto-vida.webp",
     "ficha-tecnica": "/assets/recurso-ficha-tecnica.webp"
   };
+  function createIkigaiCover() {
+    const cover = document.createElement("div");
+    cover.className = "ikigai-card-cover";
+    cover.setAttribute("role", "img");
+    cover.setAttribute("aria-label", "Diagrama de Ikigai con cuatro círculos");
+    cover.innerHTML = '<span class="ikigai-mini-circle ikigai-mini-love"></span><span class="ikigai-mini-circle ikigai-mini-good"></span><span class="ikigai-mini-circle ikigai-mini-world"></span><span class="ikigai-mini-circle ikigai-mini-paid"></span><strong>CREANDO<br>MI IKIGAI</strong>';
+    return cover;
+  }
   fetch("/api/resources")
     .then((response) => response.ok ? response.json() : Promise.reject())
     .then(({ result }) => {
@@ -32,6 +40,8 @@
           cover.height = 519;
           if (index > 0) cover.loading = "lazy";
           card.append(cover);
+        } else if (resource.id === "creando-mi-ikigai") {
+          card.append(createIkigaiCover());
         }
         const indexRow = document.createElement("div"); indexRow.className = "resource-index";
         const number = document.createElement("span"); number.textContent = String(index + 1).padStart(2, "0");
